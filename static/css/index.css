@@ -238,3 +238,24 @@ tr:hover {
 .body-image {
   width: 65%;
 }
+
+.profile-frame {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --zoom-factor: 1; /* Default zoom level */
+  --translate-x: 0px; /* Default horizontal translation */
+  --translate-y: 0px; /* Default vertical translation */
+}
+
+.profile-frame img {
+  width: calc(100% * var(--zoom-factor));
+  height: auto;
+  object-fit: cover; /* Adjust as needed */
+  /* Apply the translations */
+  transform: translate(var(--translate-x), var(--translate-y)) scale(var(--zoom-factor));
+}
