@@ -26,6 +26,25 @@ body {
   font-family: 'Google Sans', sans-serif;
 }
 
+.teaser img{
+  max-width: 250px;
+}
+
+.teaser-image-container {
+  /* background-color: #002147; Set your desired background color */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding-top: 20px;
+  padding-bottom: 20px; */
+}
+
+.teaser-section{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 
 .publication-title {
 }
@@ -214,7 +233,7 @@ tr:hover {
 }
 
 .project-description-cell {
-  padding: 0pt 20pt !important;
+  padding: 20pt 15pt !important;
   display:table-cell;
   vertical-align: middle !important;
 }
@@ -224,24 +243,29 @@ tr:hover {
 }
 
 .thumbnail-cell {
-  width: 200px; /* Specify width of the first column */
+  width: 50%; /* Specify width of the cell */
   display: table-cell;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  text-align: center !important; /* Center horizontally */
+  vertical-align: middle !important; /* Center vertically */
 }
 
-.thumbnail {
-  width: auto; /* Maintain aspect ratio */
-  max-height: 100px !important; 
+.thumbnail img {
+  display: inline; /* or 'block' if you want to apply margins */
 }
 
-.body-image {
-  width: 65%;
+.thumbnail-cell-team {
+  width: 40%; /* Specify width of the cell */
+  display: table-cell;
+  text-align: center !important; /* Center horizontally */
+  vertical-align: middle !important; /* Center vertically */
+}
+
+.thumbnail-cell-team img {
+  display: inline; /* or 'block' if you want to apply margins */
 }
 
 .profile-frame {
   width: 200px;
-  height: 200px;
   border-radius: 50%;
   overflow: hidden;
   display: flex;
@@ -259,3 +283,16 @@ tr:hover {
   /* Apply the translations */
   transform: translate(var(--translate-x), var(--translate-y)) scale(var(--zoom-factor));
 }
+
+
+.body-image {
+  width: 65%;
+}
+
+.body-section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+
+
