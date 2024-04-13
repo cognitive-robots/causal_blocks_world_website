@@ -232,42 +232,43 @@ tr:hover {
   background-color: #f5f5f5;
 }
 
-.project-description-cell {
+/* General Container Classes */
+.flex-container-centered {
+  display: flex;
+  justify-content: center;  /* Center vertically - this does not get applied to table cells*/
+  align-items: center;      /* Center horizontally if needed */
+  height: 100%;             /* Take full height of the parent */
+}
+
+/* Publication Table Classes */
+.publication-thumbnail-cell {
+  width: 50%; /* Specify width of the cell */
+  display: table-cell;
+  vertical-align: middle !important; 
+}
+
+.publication-description-cell {
   padding: 20pt 15pt !important;
-  display:table-cell;
+  display: table-cell;
   vertical-align: middle !important;
 }
 
-.project-description {
+.publication-description {
   display:table-cell;
 }
 
-.thumbnail-cell {
-  width: 50%; /* Specify width of the cell */
-  display: table-cell;
-  text-align: center !important; /* Center horizontally */
-  vertical-align: middle !important; /* Center vertically */
-}
-
-.thumbnail img {
-  display: inline; /* or 'block' if you want to apply margins */
-}
-
+/* Team Member Table Classes */
 .thumbnail-cell-team {
-  width: 40%; /* Specify width of the cell */
+  width: 35%; /* Specify width of the cell */
   display: table-cell;
-  text-align: center !important; /* Center horizontally */
-  vertical-align: middle !important; /* Center vertically */
-}
-
-.thumbnail-cell-team img {
-  display: inline; /* or 'block' if you want to apply margins */
 }
 
 .profile-frame {
   width: 200px;
+  height: 200px;
   border-radius: 50%;
   overflow: hidden;
+  object-fit: cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -276,15 +277,24 @@ tr:hover {
   --translate-y: 0px; /* Default vertical translation */
 }
 
-.profile-frame img {
+.profile-frame img{
   width: calc(100% * var(--zoom-factor));
-  height: auto;
-  object-fit: cover; /* Adjust as needed */
+  /* height: auto; */
   /* Apply the translations */
   transform: translate(var(--translate-x), var(--translate-y)) scale(var(--zoom-factor));
 }
 
+.team-description-cell {
+  padding: 20pt 15pt !important;
+  display:table-cell;
+  vertical-align: middle !important;
+}
 
+.team-description {
+  display:table-cell;
+}
+
+/* Body Classes */
 .body-image {
   width: 65%;
 }
