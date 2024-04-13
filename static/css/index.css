@@ -242,7 +242,7 @@ tr:hover {
 
 /* Publication Table Classes */
 .publication-thumbnail-cell {
-  width: 50%; /* Specify width of the cell */
+  width: 40%; /* Specify width of the cell */
   display: table-cell;
   vertical-align: middle !important; 
 }
